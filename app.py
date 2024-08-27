@@ -43,7 +43,7 @@ def upload_to_imgbb(file_path, imgbb_api_key):
 
 # Function to generate a brief introduction using Google Generative AI
 def generate_introduction(model, resume_text):
-    prompt = f"Generate a concise, professional introduction based on the following resume. The introduction should include the candidate's name, highlight key skills, summarize relevant project experience, and mention the total years of experience. Ensure the content is tailored to align with the expectations of Data Scientist, showcasing the candidate's strengths and achievements: {resume_text}"
+    prompt = f"Generate a brief professional introduction based on the following resume. Highlight the key skills, include specific numbers and achievements from projects, and mention the total years of experience: {resume_text}"
     response = model.generate_content(prompt)
     return response.text
 
